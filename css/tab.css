@@ -1,0 +1,415 @@
+@charset "UTF-8";
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none; }
+
+html, body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 625%;
+  height: 100%;
+  width: 100%; }
+
+body {
+  position: relative;
+  overflow: hidden;
+  font-size: 16px; }
+
+html, body, li, ul, ol, img, p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
+body {
+  background: #fff; }
+
+.clear:after, .clear:before {
+  content: '';
+  display: block; }
+.clear:after {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  clear: both; }
+
+.gray {
+  width: 100%;
+  height: .4rem;
+  margin-top: .4rem; }
+  .gray input, .gray a {
+    display: inline-block;
+    text-align: center;
+    line-height: .4rem;
+    background: #ccc;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: .2rem;
+    font-size: .16rem;
+    color: #fff; }
+
+.blue {
+  width: 100%;
+  height: .4rem;
+  margin-top: .2rem;
+  display: inline-block; }
+  .blue a, .blue input {
+    display: inline-block;
+    width: 100%;
+    height: .4rem;
+    background: #5e83e1;
+    border-radius: .2rem;
+    font-size: .16rem;
+    color: #fff;
+    line-height: .4rem;
+    text-align: center; }
+
+.mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999999; }
+
+/*-------dialog弹出框----------*/
+.dialog-box {
+  width: 80%;
+  height: 130px;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 6px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 999999999; }
+  .dialog-box .dialog-title {
+    border-bottom: 1px solid #ccc;
+    line-height: 40px;
+    text-indent: 10px;
+    font-size: 12px; }
+  .dialog-box .dialog-msg {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 10%; }
+  .dialog-box .dialog-btn-wrap {
+    width: 60%;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 10%;
+    display: -webkit-box;
+    -webkit-box-pack: center; }
+    .dialog-box .dialog-btn-wrap .dialog-btn {
+      -webkit-flex: 1;
+      width: 40%;
+      height: 34px;
+      border: 1px solid #37BC9B;
+      border-radius: 5px;
+      display: block;
+      text-align: center;
+      line-height: 34px;
+      color: #666;
+      cursor: pointer; }
+    .dialog-box .dialog-btn-wrap .no {
+      margin-left: 50px; }
+
+@keyframes bounceInUp {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3000px, 0);
+    -ms-transform: translate3d(0, 3000px, 0);
+    transform: translate3d(0, 3000px, 0); }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    -ms-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0); }
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    -ms-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0); }
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    -ms-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+.bounceInUp {
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp; }
+
+@minxi justcenter {
+  align-items: center;
+  justify-content: between; }
+* {
+  margin: 0;
+  padding: 0; }
+
+.css-tab {
+  width: 100%;
+  height: 100%;
+  background: #EEEEEE;
+  padding-top: 15px;
+  overflow: hidden; }
+
+/*------------------------header----------------------------*/
+.css-tab-header {
+  margin-bottom: 6px;
+  width: 100%;
+  height: 97px;
+  background: #fff;
+  position: fixed;
+  top: 15px;
+  left: 0; }
+  .css-tab-header h2 {
+    height: 58px;
+    line-height: 58px;
+    color: #515151;
+    text-align: center; }
+    .css-tab-header h2 span {
+      display: inline-block;
+      color: #515151; }
+  .css-tab-header .css-tab-nav {
+    height: 36px;
+    width: 80%;
+    margin-left: 10%;
+    line-height: 36px;
+    border-top: 1px solid #eee; }
+    .css-tab-header .css-tab-nav li {
+      width: 25%;
+      float: left;
+      text-align: center; }
+      .css-tab-header .css-tab-nav li.css-bg a {
+        font-size: 12px;
+        color: #7394E5;
+        display: inline-block;
+        border-bottom: 1px solid #7394E5; }
+      .css-tab-header .css-tab-nav li a {
+        font-size: 12px;
+        color: #B6B6B6; }
+
+/*------------------------main----------------------------*/
+.css-tab-main {
+  overflow: hidden;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 118px;
+  left: 0; }
+
+/*------------------------num----------------------------*/
+.css-tab-num {
+  background: #fff;
+  height: 100%;
+  width: 80%;
+  margin-left: 10%; }
+  .css-tab-num .css-num-one, .css-tab-num .css-num-two, .css-tab-num .css-num-three {
+    padding-top: 12px;
+    border-top: 1px solid #eee; }
+    .css-tab-num .css-num-one h3, .css-tab-num .css-num-two h3, .css-tab-num .css-num-three h3 {
+      font-size: 15px;
+      color: #7F7F7F;
+      height: 24px;
+      line-height: 24px; }
+    .css-tab-num .css-num-one p, .css-tab-num .css-num-two p, .css-tab-num .css-num-three p {
+      line-height: 20px;
+      font-size: 12px;
+      color: #999;
+      padding-bottom: 21px; }
+  .css-tab-num .css-num-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0 22px 0;
+    background: #eee; }
+    .css-tab-num .css-num-footer small {
+      display: inline-block;
+      width: 80%;
+      margin-left: 10%;
+      color: #9C9C9C;
+      font-size: 10px;
+      line-height: 22px; }
+
+/*------------------------add----------------------------*/
+.css-tab-add {
+  background: #fff;
+  height: 100%;
+  width: 80%;
+  margin-left: 10%;
+  padding-top: 15px; }
+  .css-tab-add h3 {
+    font-size: 14px;
+    color: #9C9C9C;
+    height: 26px;
+    line-height: 26px;
+    margin: 0 0 7px 0;
+    font-weight: normal; }
+    .css-tab-add h3 input {
+      font-size: 14px;
+      height: 26px;
+      line-height: 26px;
+      width: 100%;
+      border: 0;
+      outline: none; }
+  .css-tab-add .css-add-mon {
+    border-top: 1px solid #eee; }
+    .css-tab-add .css-add-mon h4 {
+      font-size: 14px;
+      color: #515151;
+      height: 50px;
+      line-height: 50px; }
+    .css-tab-add .css-add-mon ul {
+      height: 107px; }
+      .css-tab-add .css-add-mon ul li {
+        height: 40px;
+        line-height: 40px;
+        color: #9c9c9c;
+        font-size: 15px;
+        float: left;
+        border: 1px solid #eee;
+        width: 45%;
+        border-radius: 6px;
+        text-align: center;
+        margin-bottom: 12px; }
+        .css-tab-add .css-add-mon ul li:nth-of-type(2n) {
+          margin-left: 10%; }
+        .css-tab-add .css-add-mon ul li.css-on {
+          color: #5E83E1;
+          border: 1px solid #5E83E1; }
+  .css-tab-add .css-add-btn.css-btn {
+    line-height: .4rem;
+    text-align: center; }
+    .css-tab-add .css-add-btn.css-btn a {
+      display: inline-block; }
+
+/*------------------------sum----------------------------*/
+.css-tab-sum {
+  background: #fff;
+  height: 100%;
+  width: 80%;
+  margin-left: 10%;
+  padding-top: 10px; }
+  .css-tab-sum .css-sum-one h3, .css-tab-sum .css-sum-two h3, .css-tab-sum .css-sum-three h3, .css-tab-sum .css-sum-four h3 {
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    color: #515151;
+    border-bottom: 1px solid #eee;
+    position: relative; }
+  .css-tab-sum .css-sum-one span, .css-tab-sum .css-sum-two span, .css-tab-sum .css-sum-three span, .css-tab-sum .css-sum-four span {
+    position: absolute;
+    right: 0;
+    color: #5E83E1; }
+  .css-tab-sum .css-sum-one ul, .css-tab-sum .css-sum-two ul, .css-tab-sum .css-sum-three ul, .css-tab-sum .css-sum-four ul {
+    margin: 11px 0; }
+    .css-tab-sum .css-sum-one ul li, .css-tab-sum .css-sum-two ul li, .css-tab-sum .css-sum-three ul li, .css-tab-sum .css-sum-four ul li {
+      font-size: 12px;
+      color: #909090;
+      height: 21px;
+      line-height: 21px;
+      position: relative; }
+      .css-tab-sum .css-sum-one ul li img, .css-tab-sum .css-sum-two ul li img, .css-tab-sum .css-sum-three ul li img, .css-tab-sum .css-sum-four ul li img {
+        margin-right: 2%;
+        width: 12px;
+        height: 10px; }
+      .css-tab-sum .css-sum-one ul li i, .css-tab-sum .css-sum-two ul li i, .css-tab-sum .css-sum-three ul li i, .css-tab-sum .css-sum-four ul li i {
+        display: inline-block;
+        font-style: normal;
+        position: absolute;
+        right: 0; }
+  .css-tab-sum .css-sum-four h3 {
+    font-size: 16px;
+    font-weight: bolder;
+    border: 0; }
+  .css-tab-sum .css-sum-four p {
+    font-size: 12px;
+    color: #5E83E1;
+    line-height: 15px;
+    margin-top: 10px; }
+  .css-tab-sum .css-num-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 15px 0 22px 0;
+    background: #eee;
+    width: 100%; }
+    .css-tab-sum .css-num-footer small {
+      display: block;
+      width: 80%;
+      margin-left: 10%;
+      color: #9C9C9C;
+      font-size: 10px;
+      line-height: 22px; }
+
+/*------------------------person----------------------------*/
+.css-tab-person {
+  background: #fff;
+  height: 100%;
+  width: 80%;
+  margin-left: 10%;
+  padding-top: 15px; }
+  .css-tab-person .css-person-menu h2 {
+    font-size: 16px;
+    color: #515151;
+    height: 24px;
+    line-height: 24px;
+    margin: 0 0 5px 0; }
+  .css-tab-person .css-person-menu h4 {
+    border-top: 1px solid #eee;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #515151; }
+  .css-tab-person .css-person-menu ul li {
+    height: 21px;
+    line-height: 21px;
+    color: #9C9C9C;
+    font-size: 12px; }
+    .css-tab-person .css-person-menu ul li img {
+      margin-right: 2%;
+      width: 12px;
+      height: 10px; }
+  .css-tab-person .css-num-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px 0 22px 0;
+    background: #eee;
+    width: 100%; }
+    .css-tab-person .css-num-footer small {
+      display: block;
+      width: 80%;
+      margin-left: 10%;
+      color: #9C9C9C;
+      font-size: 10px;
+      line-height: 22px; }
+
+/*# sourceMappingURL=tab.css.map */
